@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patron:</strong>
+  <%= @checkout.patron.name %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @checkout.book.title %>
+</p>
+
+<p>
+  <strong>Check out by:</strong>
+  <%= @checkout.check_out_by %>
+</p>
+
+<p>
+  <strong>Check in by:</strong>
+  <%= @checkout.check_in_by %>
+</p>
+
+<%= link_to 'Check book back in to library', edit_checkout_path(@checkout) %> |
+<%= link_to 'View all checkouts', checkouts_path %> |
+<%= link_to 'View Books', books_path %>

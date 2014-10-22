@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patron_id: 1
+  book_id: 1
+  check_out_by: MyString
+  check_in_by: MyString
+
+two:
+  patron_id: 1
+  book_id: 1
+  check_out_by: MyString
+  check_in_by: MyString

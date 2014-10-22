@@ -1,0 +1,34 @@
+<h1>New checkout</h1>
+
+<%= form_for(@checkout) do |f| %>
+  <% if @checkout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
+
+      <ul>
+      <% @checkout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patron_id %><br>
+    <%= f.number_field :patron_id %>
+  </div>
+  <div class="field">
+    <%= f.label :book_id %><br>
+    <%= f.number_field :book_id %>
+  </div>
+  <div class="field">
+    <%= f.label :check_out_by %><br>
+    <%= f.text_field :check_out_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'View all checkouts', checkouts_path %>

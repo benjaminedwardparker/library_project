@@ -16,7 +16,7 @@
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.on_shelf %></td>
-        <td><%= link_to 'Borrow Book', new_checkout_path(book) %></td>
+        <td><%= link_to 'Borrow Book', new_checkout_path(book_id: book.id) %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

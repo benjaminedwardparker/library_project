@@ -15,11 +15,11 @@
 
   <div class="field">
     <%= f.label :patron_id %><br>
-    <%= f.number_field :patron_id %>
+    <%= f.collection_select :patron_id, Patron.all, :id, :name, prompt: true %>
   </div>
   <div class="field">
     <%= f.label :book_id %><br>
-    <%= f.number_field :book_id %>
+    <%= f.collection_select :book_id, Book.all, :id, :title, prompt: true %>
   </div>
   <div class="field">
     <%= f.label :check_out_by %><br>

@@ -13,6 +13,9 @@ class CheckoutsController < ApplicationController
   # GET /checkouts/new
   def new
     @checkout = Checkout.new
+    if params[:book_id]
+      @checkout.book = Book.find(params[:book_id])
+    end
     # @book = Book.find(params[:book_id])
   end
 
